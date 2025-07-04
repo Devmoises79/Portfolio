@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Contato</title>
+</head>
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+    body {
+        background: #171717;
+        font-family: "Inter", sans-serif;
+        animation: fadeIn 2s ease-in-out;
+    } 
+
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+form {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+form input,
+form textarea,
+form button {
+    animation: fadeIn 1.3s ease-in-out;
+}
+
+
+
+    nav {
+        display: flex;
+        gap: 20px;
+    }
+    
+    
+    nav .logo {
+        height: 64px;
+        width: 64px;
+        background: #18181b;
+        border: 1px solid #27272a;
+        border-radius: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }    
+    
+    nav .logo i {
+        font-size: 26px;
+        color: #005e9c;
+    }
+    
+    
+    nav .links {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 66px;
+        background: #18181b;
+        border: 1px solid #27272a;
+        border-radius: 48px;
+    }
+
+    
+    nav .links a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    nav .links a.active {
+        font-weight: bold;
+        color: #005e9c;
+    }
+
+
+    a:hover {
+        color: #005e9c !important; 
+    }
+
+    h2.titulo {
+        text-align: center;
+        color: rgb(233, 233, 233);
+        font-family: Inter, sans-serif;
+        font-weight: bold;
+        margin-top: 40px;
+        font-size: 5vh;
+    }
+    section.formulario{
+        padding: 80px 4%;
+    }
+
+    form{
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 40px;
+        border-radius: 10px;
+
+    
+    }
+
+
+    form input, form textarea {
+        width: 100%;
+        background-color: rgb(241, 244, 247);
+        border: 0;
+        outline: 0;
+        padding: 20px 13px;
+        border-radius: 15px;
+        color: #000000;
+        font-size: 18px;
+        
+    }
+
+
+    form textarea {
+        resize: none;
+        max-height: 200px;
+        border-radius: 6px;
+    }
+  
+    form button {
+    width: 100%;
+    max-width: 200px;
+    align-self: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    margin-top: 16px;
+}
+
+form button:hover {
+    background-color: #0056d2;
+    transform: scale(1.03);
+}
+
+ 
+
+    
+</style>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="links">
+            <a href="portfolio.html" class="active">Sobre</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contato.html">Contate Me</a>
+            <a href="Projetos.html">Projetos</a>
+        </div>
+    </nav>
+
+    <section class="formulario">
+        <div class="interface">
+            <h2 class="titulo"> Fale <span>Comigo</span> </h2>
+            
+    
+    <form id="contactForm">
+        <input type="text" id="nome" required placeholder="Nome completo">
+        <input type="email" id="email" required placeholder="Email">
+        <input type="tel" id="celular" placeholder="Celular (opcional)">
+        <textarea id="mensagem" required placeholder="Sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Mensagem oculta que aparece após o envio -->
+<div id="mensagemEnviada" style="display: none; text-align: center; margin-top: 20px; color: #00df77; font-size: 18px;">
+  Mensagem enviada com sucesso! Obrigado pelo contato.
+</div>
+    
+    </section>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Mostra a mensagem
+    const msg = document.getElementById("mensagemEnviada");
+    msg.style.display = "block";
+
+    // Limpa o formulário
+    this.reset();
+
+    // Oculta a mensagem após alguns segundos 
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 5000);
+  });
+</script>
+
+
+
+
+
+</body>
+</html>
