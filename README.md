@@ -3,7 +3,7 @@
 Este é o repositório do meu portfólio profissional como desenvolvedor, onde compartilho meus projetos, habilidades e experiências. A proposta é apresentar de forma visual e acessível minhas competências em desenvolvimento web, back-end e outras áreas da tecnologia.
 
 🔗 Acesse o portfólio online:  
-👉 https://portfolio-ten-delta-43.vercel.app/projetos.html
+👉 https://portfolio-ten-delta-43.vercel.app/index.html
 
 ---
 
