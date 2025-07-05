@@ -43,9 +43,5 @@ Este projeto está hospedado gratuitamente na **Vercel**:
 
 ---
 
-## 🛠️ Como rodar localmente
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/Devmoises79/Portfolio.git
-   ```
+
